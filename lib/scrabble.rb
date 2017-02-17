@@ -1,7 +1,14 @@
 class Scrabble
-
+ 
   def score(word)
-    1
+    
+    point_values.keys.map do |key|
+      if word.upcase == key
+       word = point_values[key]
+       return word
+      end
+    end
+    #
   end
 
   def point_values
@@ -14,5 +21,14 @@ class Scrabble
       "U"=>1, "V"=>4, "W"=>4, "X"=>8,
       "Y"=>4, "Z"=>10
     }
+  
   end
+
+   def score_with_multipliers(word, number)
+    
+
+  end
+  
 end
+
+
